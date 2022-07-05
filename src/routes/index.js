@@ -1,4 +1,7 @@
-import { HeaderOnly } from '~/components/Layout';
+import config from '~/config';
+
+// Layouts
+import { HeaderOnly } from '~/layouts';
 
 
 // Pages
@@ -9,11 +12,11 @@ import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
 
 const publicRoutes = [
-    {path: '/', component: Home},
-    {path: '/following', component: Following},
-    {path: '/profile', component: Profile},
-    {path: '/upload', component: Upload, layout: HeaderOnly},
-    {path: '/search', component: Search, layout: null},
+    {path: config.routes.home, component: Home},
+    {path: config.routes.following, component: Following},
+    {path: config.routes.profile, component: Profile},
+    {path: config.routes.upload, component: Upload, layout: HeaderOnly},
+    {path: config.routes.search, component: Search, layout: null},
     
 ]
 
